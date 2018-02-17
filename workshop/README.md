@@ -234,3 +234,17 @@ $ vi content/tercera_entrada.md
 $ vi content/quarta_entrada.md
 ...
 ```
+
+
+## És hora de personalitzar-lo!
+
+Anem a 'tunejar' una mica el nostre site.
+
+### Tema
+
+https://github.com/getpelican/pelican-themes
+
+
+### Plugins
+
+https://github.com/getpelican/pelican-plugins
