@@ -191,3 +191,22 @@ Obrirem l'index del nostre nou site
 ```bash
 $ firefox output/index.html
 ```
+
+#### WTF? No tenim estils?
+
+Estem obrint un html des del file:///, tots els requeriments relatius carregats (estils, JS, ...) no es poden satisfer.
+
+La solució? Aixecar "el servidor" de desenvolupament que Pelican integra:
+
+```bash
+$ bash develop_server.sh start 8000
+Starting up Pelican and HTTP server
+DEBUG: Pelican version: 3.7.1
+DEBUG: Python version: 3.6.4
+...
+...
+Done: Processed 1 article, 0 drafts, 0 pages and 0 hidden pages in 0.11 seconds.
+Pelican and HTTP server processes now running in background.
+```
+
+A partir d'aquest moment podem atacar la nostra web a `localhost:8000`
