@@ -240,12 +240,44 @@ També permet definir pàgines sense cap relació temporal, per exemple per crea
 Per fer-ho només cal crear nous fitxers de contingut sota el directori `content/pages`.
 
 
+### Resum
+
+Tenim dos tipus de contiguts:
+- les entrades
+- les pàgines
+
+A `content` hi podem estructurar el contingut en subdirectoris per cada una de les categories, de forma que tot quedi un pel més ordenat:
+
+```
+content/
+├── categoria1                  <--- entrades amb categoria1
+│   └── una_altra_entrada.md
+│   └── una_altra_entrada2.md
+├── categoria2                  <--- entrades amb categoria1
+│   └── una_entrada.md
+│   └── una_entrada2.md
+├── pages                       <--- pàgines
+│   └── una_pagina.md
+│   └── contacte.md
+│   └── about.md
+├── primera_entrada.md          
+├── segona_entrada.md
+└── wtf.md
+
+```
+
+Tot i això, dins del fitxer de contingut, podem definir-hi la categoria emprant la propietat `Category`. Si la definim, aquesta manarà sobre l'organització dels directoris.
+
+
+### A jugar!
+
 Creeu més continguts, i visualitzeu com Pelican els va afegint al nostre site.
 
 Sigueu originals,
 - jugueu una mica amb les possiblitats de _markdown_
 - creeu noves categories i reviseu com Pelican modifica la organització del site
 - afegiu-hi metadates
+- creeu contingut atemporal
 
 ```bash
 $ vi content/segona_entrada.md
