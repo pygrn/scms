@@ -240,6 +240,26 @@ També permet definir pàgines sense cap relació temporal, per exemple per crea
 Per fer-ho només cal crear nous fitxers de contingut sota el directori `content/pages`.
 
 
+### Metadades
+
+Pelican permet integrar metadades HTML en funció de les variables del contingut, les principals són:
+
+- Title: El títol del contingut
+- Date: Data de publicació
+  - format `YYYY-MM-DD HH:MM`
+- Modified: Data de modificació
+  - format `YYYY-MM-DD HH:MM`
+- Category: Categoria sota la qual agrupar el contingut
+- Tags: Llista de tags `tag1, tag2, ...`
+  - llista separada per comes
+- Slug: `la-meva-url-personalitzada`
+- Authors: `Author1, Author2, ...`
+  - llista separada per comes
+- Summary: Resum del contingut
+- Status: identifica l'estat del contingut
+  - hidden, draft, published
+
+
 ### Resum
 
 Tenim dos tipus de contiguts:
@@ -285,27 +305,6 @@ $ vi content/tercera_entrada.md
 $ vi content/quarta_entrada.md
 ...
 ```
-
-### Metadades
-
-Pelican permet integrar metadades HTML en funció de les variables del contingut, les principals són:
-
-- Title: El títol del contingut
-- Date: Data de publicació
-  - format `YYYY-MM-DD HH:MM`
-- Modified: Data de modificació
-  - format `YYYY-MM-DD HH:MM`
-- Category: Categoria sota la qual agrupar el contingut
-- Tags: Llista de tags `tag1, tag2, ...`
-  - llista separada per comes
-- Slug: `la-meva-url-personalitzada`
-- Authors: `Author1, Author2, ...`
-  - llista separada per comes
-- Summary: Resum del contingut
-```
-
-
-
 
 ## És hora de personalitzar-lo!
 
