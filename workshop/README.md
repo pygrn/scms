@@ -132,3 +132,62 @@ Compilem el nostre site
 $ pelican content
 Done: Processed 1 article, 0 drafts, 0 pages and 0 hidden pages in 0.11 seconds.
 ```
+
+Veureu que dins ha generat tots els fitxers estàtics dins d'`output`
+```bash
+$ tree
+.
+├── content
+│   └── primera_entrada.md
+├── develop_server.sh
+├── fabfile.py
+├── Makefile
+├── output
+│   ├── archives.html
+│   ├── author
+│   │   └── xavi-torello.html
+│   ├── authors.html
+│   ├── categories.html
+│   ├── category
+│   │   └── posts.html
+│   ├── index.html
+│   ├── la-nostra-primera-entrada.html
+│   ├── tags.html
+│   └── theme
+│       ├── css
+│       │   ├── main.css
+│       │   ├── pygment.css
+│       │   ├── reset.css
+│       │   ├── typogrify.css
+│       │   └── wide.css
+│       └── images
+│           └── icons
+│               ├── aboutme.png
+│               ├── bitbucket.png
+│               ├── delicious.png
+│               ├── facebook.png
+│               ├── github.png
+│               ├── gitorious.png
+│               ├── gittip.png
+│               ├── google-groups.png
+│               ├── google-plus.png
+│               ├── hackernews.png
+│               ├── lastfm.png
+│               ├── linkedin.png
+│               ├── reddit.png
+│               ├── rss.png
+│               ├── slideshare.png
+│               ├── speakerdeck.png
+│               ├── stackoverflow.png
+│               ├── twitter.png
+│               ├── vimeo.png
+│               └── youtube.png
+├── pelicanconf.py
+├── publishconf.py
+```
+
+Obrirem l'index del nostre nou site
+
+```bash
+$ firefox output/index.html
+```
