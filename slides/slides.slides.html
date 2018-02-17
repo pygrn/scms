@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11776,7 +11776,6 @@ ul.typeahead-list > li > a {
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
   font-size: 160%;
-  overflow-y: scroll;
 }
 .reveal pre {
   width: inherit;
@@ -11806,6 +11805,41 @@ ul.typeahead-list > li > a {
 }
 .reveal .progress {
   position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
 }
 div.input_area {
   padding: 0.06em;
@@ -11840,6 +11874,19 @@ a.anchor-link {
 .rendered_html p {
   text-align: inherit;
 }
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
+}
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
@@ -11854,8 +11901,7 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11872,8 +11918,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11895,8 +11940,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11906,8 +11950,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11957,8 +12000,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11971,8 +12013,7 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11984,8 +12025,7 @@ a.anchor-link {
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11994,52 +12034,65 @@ Per webs senzilles poden NO ser la millor solució:
 </h3><h1 align="center">
 🙈🙈
 </h1><h4 align="center">
-Sensació de matar moscas a cañonazos
+Sensació de "matar moscas a cañonazos"
 </h4>
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#191;Qu&#232;-son-els-gestors-de-continguts-est&#224;tics-(SCMS)?">&#191;Qu&#232; son els gestors de continguts est&#224;tics (SCMS)?<a class="anchor-link" href="#&#191;Qu&#232;-son-els-gestors-de-continguts-est&#224;tics-(SCMS)?">&#182;</a></h1><p><strong>CMS</strong> que "compilen" els continguts en fitxers estàtics</p>
+<h1 id="&#191;Qu&#232;-son-els-gestors-de-continguts-est&#224;tics-(SCMS)?">&#191;Qu&#232; son els gestors de continguts est&#224;tics (SCMS)?<a class="anchor-link" href="#&#191;Qu&#232;-son-els-gestors-de-continguts-est&#224;tics-(SCMS)?">&#182;</a></h1><p><strong>CMS</strong> que "compilen" els continguts en fitxers estàtics.</p>
+<p>La generació del contingut se sol realitzar en texte pla, la jerarquia s'otorga en funció de la organització de l'arbre de directoris d'on penja el contingut, i l'estructura interna s'estableix normalment emprant <em><a href="https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst">reStructuredText</a></em> o <em><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown</a></em></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Avantatges-i-inconvenients-dels-SCMS">Avantatges i inconvenients dels SCMS<a class="anchor-link" href="#Avantatges-i-inconvenients-dels-SCMS">&#182;</a></h1><h2 id="Avantatges">Avantatges<a class="anchor-link" href="#Avantatges">&#182;</a></h2><ul>
-<li>Facilitat d'ús, no necessitem programar</li>
+<li>Facilitat d'ús, no necessitem programar res</li>
 <li>Requeriments d'infraestructura molt petits</li>
 <li>Continguts molt ràpids de carregar</li>
 <li>Molt poc vulnerables en termes de seguretat</li>
-<li>Hostings amb plans especials (inclús gratuits) per pàgines estàtiques</li>
+<li>Hostings molt econòmics (fins i tot gratuits) per servir només pàgines estàtiques</li>
 </ul>
 
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Desavantatges">Desavantatges<a class="anchor-link" href="#Desavantatges">&#182;</a></h2><ul>
 <li>No poden generar contingut dinàmic (<em>server-side, javascript sí</em>)</li>
 <li>Ecosistemes d'eines molt més petits que els CMS més coneguts</li>
+<li>Per generar nous continguts implica un pas més: la publicació (<em>veurem que és molt senzill, fins i tot transparent</em>)</li>
 </ul>
 
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ideals-per">Ideals per<a class="anchor-link" href="#Ideals-per">&#182;</a></h2><ul>
+<li>Pàgines de presentació personal</li>
+<li>CV</li>
+<li>Pàgines de projecte</li>
+<li>Petits blogs</li>
+<li>Pàgines d'empresa</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12058,18 +12111,34 @@ Sensació de matar moscas a cañonazos
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introducci&#243;-al-SCMS-Pelican">Introducci&#243; al SCMS Pelican<a class="anchor-link" href="#Introducci&#243;-al-SCMS-Pelican">&#182;</a></h1><p>TODO! HELP NEEDED</p>
+<h1 id="Introducci&#243;-al-SCMS-Pelican">Introducci&#243; al SCMS Pelican<a class="anchor-link" href="#Introducci&#243;-al-SCMS-Pelican">&#182;</a></h1><p>Pelican és el generador de contingut amb un ecosistema més atractiu.</p>
+<p>Disposa de força <a href="https://github.com/getpelican/pelican-plugins">plugins</a> i <a href="https://github.com/getpelican/pelican-themes">temes</a> que contribueixen a generar petits sites estàtics de forma ràpida i sencilla.</p>
+<p>Té una corba d'aprenentatge molt petita, que permet desplegar sites en zero coma!</p>
+<p>Si és necessita, es pot extendre per atacar models de dades més complexes que una publicació d'un blog, o un article d'un site.</p>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Features-principals">Features principals<a class="anchor-link" href="#Features-principals">&#182;</a></h3><ul>
+<li>Generació de contingut cronològic (articles, posts, ...)</li>
+<li>Temes fets emprant Jinja2</li>
+<li>Autogeneració d'elements sindicables (RSS, Atom)</li>
+<li>Integració "nativa" amb serveis de tercers (Disqus, Piwik, Google Analytics, ...)</li>
+<li>Migració / importació de continguts des de WP, DotClear, ...</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12078,18 +12147,73 @@ Sensació de matar moscas a cañonazos
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="TALLER-PR&#192;CTIC">TALLER PR&#192;CTIC<a class="anchor-link" href="#TALLER-PR&#192;CTIC">&#182;</a></h1><p>TODO! HELP NEEDED: <a href="https://trello.com/c/hhm44SZF/5-preparar-taller">https://trello.com/c/hhm44SZF/5-preparar-taller</a></p>
+<h1 id="Taller">Taller<a class="anchor-link" href="#Taller">&#182;</a></h1><h3 id="Que-farem?">Que farem?<a class="anchor-link" href="#Que-farem?">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Crearem un nou projecte de Pelican</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Generarem una mica de contingut</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>El tunejarem una mica (temes, plugins, ...)</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Compilarem el nostre site i el publicarem!</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<h1>Let's gonna play, dudes!</h1>
+<br/><br/>
+<img src="https://media1.tenor.com/images/6d4dd735cf2182428df3d9e0e235c7ed/tenor.gif?itemid=5349482">
+<br/><br/>
+</center><p>Passem a <a href="https://github.com/pygrn/scms/blob/devel/workshop/README.md">https://github.com/pygrn/scms/blob/devel/workshop/README.md</a></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12138,8 +12262,7 @@ require(
             progress: true,
             history: true,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            transition: "slide",
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -12159,13 +12282,25 @@ require(
 
         Reveal.addEventListener('slidechanged', update);
 
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
 
-        Reveal.addEventListener('slidechanged', update_scroll);
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
 
     }
+
 );
 </script>
 
