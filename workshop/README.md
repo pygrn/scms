@@ -280,13 +280,13 @@ content/
 │   └── una_pagina.md
 │   └── contacte.md
 │   └── about.md
-├── primera_entrada.md          
+├── primera_entrada.md             
 ├── segona_entrada.md
 └── wtf.md
 
 ```
 
-Tot i això, dins del fitxer de contingut, podem definir-hi la categoria emprant la propietat `Category`. Si la definim, aquesta manarà sobre l'organització dels directoris.
+Tot i això, dins del fitxer de contingut, podem definir-hi la categoria emprant la metadada `Category`. Si la definim, aquesta manarà sobre l'organització dels directoris.
 
 
 ### A jugar!
@@ -294,7 +294,7 @@ Tot i això, dins del fitxer de contingut, podem definir-hi la categoria emprant
 Creeu més continguts, i visualitzeu com Pelican els va afegint al nostre site.
 
 Sigueu originals,
-- jugueu una mica amb les possiblitats de _markdown_
+- jugueu una mica amb les possiblitats de _markdown_ o de _rst_
 - creeu noves categories i reviseu com Pelican modifica la organització del site
 - afegiu-hi metadates
 - creeu contingut atemporal
@@ -318,3 +318,6 @@ https://github.com/getpelican/pelican-themes
 ### Plugins
 
 https://github.com/getpelican/pelican-plugins
+
+
+### Traduccions
