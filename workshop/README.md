@@ -228,6 +228,18 @@ $ bash develop_server.sh stop
 
 ## Creeu nou contingut
 
+Hem vist que tot el contingut sota content és interpretat per Pelican com contingut temporal (cronològicament ordenable), el que permet implementar la lògica d'articles, posts, ...
+
+Pelican permet crear una jerarquia de categories basada en la organització del directori `content`, de manera que podeu crear subdirectoris per cada categoria, i fer-hi penjar d'allà els fitxers de contingut.
+
+
+### Pàgines
+
+També permet definir pàgines sense cap relació temporal, per exemple per crear una landing page específica, una pàgina tipus "Sobre nosaltres" o fins i tot una de contacte.
+
+Per fer-ho només cal crear nous fitxers de contingut sota el directori `content/pages`.
+
+
 Creeu més continguts, i visualitzeu com Pelican els va afegint al nostre site.
 
 Sigueu originals,
