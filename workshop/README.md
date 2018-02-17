@@ -83,12 +83,16 @@ Si volem definir-lo, premem 'y', i introduim la url per defecte del nostre site:
 > What is your time zone? [Europe/Paris] Europe/Andorra
 ```
 
-L'assistent demanarà confirmació per desplegar-hi les eines per defecte de desenvolupament i publicació, deixeu-ho tot per defecte. Ho modificarem després depenent d'on ho vulguem desplegar.
+L'assistent demanarà confirmació per desplegar-hi les eines per defecte de desenvolupament i publicació, deixeu-ho tot per defecte.
+
+Ho modificarem després depenent d'on ho vulguem publicar.
+
+Ens haurà creat la nostra configuració i haurà preparat l'esquelet base del nostre projecte.
 
 
 #### Estructura del projecte
 
-Pelican ens haurà desplegat tot lo necessari per poder començar a generar contingut.
+Pelican ens haurà creat tot lo necessari per poder començar a generar contingut.
 
 L'estructura és la següent:
 
@@ -226,7 +230,10 @@ $ bash develop_server.sh stop
 
 Creeu més continguts, i visualitzeu com Pelican els va afegint al nostre site.
 
-Sigueu originals, jugueu una mica amb les possiblitats de _markdown_, creeu noves categories i reviseu com Pelican modifica la organització del site, ...
+Sigueu originals,
+- jugueu una mica amb les possiblitats de _markdown_
+- creeu noves categories i reviseu com Pelican modifica la organització del site
+- afegiu-hi metadates
 
 ```bash
 $ vi content/segona_entrada.md
@@ -235,12 +242,32 @@ $ vi content/quarta_entrada.md
 ...
 ```
 
+### Metadades
+
+Pelican permet integrar metadades HTML en funció de les variables del contingut, les principals són:
+
+- Title: El títol del contingut
+- Date: Data de publicació
+  - format `YYYY-MM-DD HH:MM`
+- Modified: Data de modificació
+  - format `YYYY-MM-DD HH:MM`
+- Category: Categoria sota la qual agrupar el contingut
+- Tags: Llista de tags `tag1, tag2, ...`
+  - llista separada per comes
+- Slug: `la-meva-url-personalitzada`
+- Authors: `Author1, Author2, ...`
+  - llista separada per comes
+- Summary: Resum del contingut
+```
+
+
+
 
 ## És hora de personalitzar-lo!
 
 Anem a 'tunejar' una mica el nostre site.
 
-### Tema
+### Temes
 
 https://github.com/getpelican/pelican-themes
 
