@@ -296,7 +296,7 @@ Creeu més continguts, i visualitzeu com Pelican els va afegint al nostre site.
 Sigueu originals,
 - jugueu una mica amb les possiblitats de _markdown_ o de _rst_
 - creeu noves categories i reviseu com Pelican modifica la organització del site
-- afegiu-hi metadates
+- afegiu-hi metadades
 - creeu contingut atemporal
 
 ```bash
