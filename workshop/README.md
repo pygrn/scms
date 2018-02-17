@@ -85,3 +85,24 @@ Si volem definir-lo, premem 'y', i introduim la url per defecte del nostre site:
 
 L'assistent demanarà confirmació per desplegar-hi les eines per defecte de desenvolupament i publicació, deixeu-ho tot per defecte. Ho modificarem després depenent d'on ho vulguem desplegar.
 
+
+#### Estructura del projecte
+
+Pelican ens haurà desplegat tot lo necessari per poder començar a generar contingut.
+
+L'estructura és la següent:
+
+```bash
+$ tree .
+.
+├── content                 <--- Aquí hi desarem tot el nostre contingut
+├── develop_server.sh
+├── fabfile.py
+├── Makefile
+├── output                  <--- Quan generem el site, els fitxers estàtics es desaran aqui
+├── pelicanconf.py          <--- Configuració del projecte
+└── publishconf.py          <--- Configuració de la publicació
+
+2 directories, 5 files
+```
+
