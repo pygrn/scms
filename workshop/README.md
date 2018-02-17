@@ -4,7 +4,7 @@ Que farem?
 - [Crearem un nou projecte basat en Pelican](#creació-del-projecte)
 - [Generarem una mica de contingut](#creeu-nou-contingut)
 - [El tunejarem una mica](#És-hora-de-personalitzar-lo)
-- El publicarem
+- [El publicarem](#publicació)
 
 
 ## Creació del projecte
@@ -306,6 +306,8 @@ $ vi content/quarta_entrada.md
 ...
 ```
 
+
+
 ## És hora de personalitzar-lo!
 
 Anem a 'tunejar' una mica el nostre site.
@@ -321,3 +323,36 @@ https://github.com/getpelican/pelican-plugins
 
 
 ### Traduccions
+
+
+
+## Publicació!
+
+Un cop tenim el nostre site llest, podem fer varies coses per publicar-lo, des d'accions manuals, scripts o integrar el procés de publicació dins del propi Pelican.
+
+La gràcia de tot plegat és que Pelican integra diferents mecanismes típics de publicació:
+- FTP
+- SSH
+- Github pages
+- Amazon S3
+- Rackspace Cloud Files
+- Dropbox
+
+En el taller veurem els tres primers.
+
+### Handmade
+
+Sempre tenim la opció de copiar el contingut generat cap al servidor destinació de forma manual.
+
+Rudimentari, però funciona xD:
+```bash
+$ scp -r output/* $user@$host:$vhost
+```
+
+### Via Pelican-FTP
+
+Tenim la opció de demanar-li a Pelican que s'encarregui de publicar els canvis via FTP. No cal que ho fem manualment, només cal definir certs paràmetres de configuració:
+
+### Via Pelican-SSH
+
+### Via Pelican-GithubPages
