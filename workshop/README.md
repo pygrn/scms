@@ -1,8 +1,8 @@
 # sCMS Workshop
 
 Que farem?
-- Crearem un nou projecte basat en Pelican
-- Generarem una mica de contingut
+- [Crearem un nou projecte basat en Pelican](#Creació_del_projecte)
+- [Generarem una mica de contingut](#Creeu_nou_contingut)
 - El tunejarem una mica
 - El publicarem
 
@@ -222,7 +222,7 @@ Per aturar-lo només caldrà fer:
 $ bash develop_server.sh stop
 ```
 
-#### Creeu nou contingut
+## Creeu nou contingut
 
 Creeu més continguts, i visualitzeu com Pelican els va afegint al nostre site.
 
