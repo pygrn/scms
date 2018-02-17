@@ -1,9 +1,9 @@
 # sCMS Workshop
 
 Que farem?
-- [Crearem un nou projecte basat en Pelican](#Creació_del_projecte)
-- [Generarem una mica de contingut](#Creeu_nou_contingut)
-- El tunejarem una mica
+- [Crearem un nou projecte basat en Pelican](#Creació-del-projecte)
+- [Generarem una mica de contingut](#Creeu-nou-contingut)
+- [El tunejarem una mica](#És-hora-de-personalitzar-lo!)
 - El publicarem
 
 
