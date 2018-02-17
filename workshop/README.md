@@ -222,3 +222,15 @@ Per aturar-lo només caldrà fer:
 $ bash develop_server.sh stop
 ```
 
+#### Creeu nou contingut
+
+Creeu més continguts, i visualitzeu com Pelican els va afegint al nostre site.
+
+Sigueu originals, jugueu una mica amb les possiblitats de _markdown_, creeu noves categories i reviseu com Pelican modifica la organització del site, ...
+
+```bash
+$ vi content/segona_entrada.md
+$ vi content/tercera_entrada.md
+$ vi content/quarta_entrada.md
+...
+```
