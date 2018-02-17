@@ -125,3 +125,10 @@ In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum fe
 
 EOF
 ```
+
+Compilem el nostre site
+
+```bash
+$ pelican content
+Done: Processed 1 article, 0 drafts, 0 pages and 0 hidden pages in 0.11 seconds.
+```
