@@ -210,3 +210,15 @@ Pelican and HTTP server processes now running in background.
 ```
 
 A partir d'aquest moment podem atacar la nostra web a `localhost:8000`
+
+```bash
+$ firefox "http://localhost:8000"
+```
+
+Qualsevol canvi que realitzem serà detectat automàticament, i Pelican "re-compilarà" el nostre site. Només cal que refresquem FF per veure els canvis
+
+Per aturar-lo només caldrà fer:
+```bash
+$ bash develop_server.sh stop
+```
+
