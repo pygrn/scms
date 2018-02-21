@@ -17,10 +17,10 @@ $ pip intall -r requirements.txt
 $ cat requirements.txt
 pelican
 markdown
+ghp-import
 ```
 
 Si no teniu cap entorn virtual, creueu-ne un de nou! Python3 plz :)
-
 
 
 ### 2) Crearem el projecte
@@ -316,9 +316,27 @@ $ vi content/quarta_entrada.md
 
 
 
+
 ## És hora de personalitzar-lo!
 
 Anem a 'tunejar' una mica el nostre site.
+
+### Config base del siste
+
+Cada tema té les seves propies propietats, però per defecte tots tenen un llistat de links i un llistat de links socials
+
+Per configurar-ho només cal editar les variables `LINKS` i `SOCIAL` de `pelicanconf.py`
+
+Per altra banda, també podem modificar la quantitat d'elements. per pàgina emprant la variable `DEFAULT_PAGINATION`.
+
+Veureu que també podem activar els feeds de dades definint la URI on els podrem trobar.
+
+`SITEURL` defineix la URL base del nostre site (on la publicarem), i `RELATIVE_URLS` gestiona com es linkaran entre ells els diferents recursos (de forma relativa o absoluta).
+
+Veureu que hi ha dos fitxers que poden descriure/sobrescriure les mateies propietats:
+- `pelicanconf.py` s'utilitza per la generació base del contingut i per aixecar el servidor web de desenvolupament
+- `publishconf.py` s'utilitza per la generació final del contingut i pel procés de publicació del site
+
 
 ### Temes
 
@@ -357,19 +375,18 @@ Trobareu més informació a http://docs.getpelican.com/en/3.6.3/themes.html#crea
 
 Per descarregar-los:
 - 1) podem descarregar tots els temes oficials i configurar el nostre site per a que vagi a buscar un tema en concret passant-li el path
-  - `git clone --recursive https://github.com/getpelican/pelican-themes ~/pelican-themes`
+  - `git clone --recursive https://github.com/getpelican/pelican-themes ~/pelican/themes`
 - 2) podem descarregar-ne només un
-  - `$ git clone git@github.com:alexandrevicenzi/Flex.git ~/pelican-themes/Flex`
+  - `$ git clone git@github.com:alexandrevicenzi/Flex.git ~/pelican/themes/Flex`
 
 Per activar-los:
 - 1) podem configurar-lo passant-li el path
-  - `THEME = "~/pelican-themes/$EL_TEMA"`
+  - `THEME = "~/pelican/themes/$EL_TEMA"`
 - 2) podem instalar-lo al nostre virtual env emprant la utilitat de Pelican:
   - Install una de les dues opcions:
-    - Linkat: `pelican-themes -s $PATH_DEL_TEMA --verbose`
-    - Copia: `pelican-themes -i $PATH_DEL_TEMA --verbose`
+    - Linkat: `pelican/themes -s $PATH_DEL_TEMA --verbose`
+    - Copia: `pelican/themes -i $PATH_DEL_TEMA --verbose`
   - Activació `THEME = "$EL_TEMA"`
-
 
 
 
@@ -383,7 +400,6 @@ Comparat amb els temes, tot el repositori de plugins pesa poc, el podem descarre
 ```
 git clone --recursive https://github.com/getpelican/pelican-plugins ~/pelican/plugins
 ```
-
 #### L'activarem
 
 Escolliu-ne un, i l'activarem, nosaltres activarem `sitemap`. Reviseu el README del plugin per conèixer com funciona i com es configura: https://github.com/getpelican/pelican-plugins/blob/master/sitemap/Readme.rst
@@ -429,7 +445,12 @@ El sistema modular de Pelican permet que ens creem els nostres propis plugins, n
 
 No oblideu de contribuïr-los a la comunitat!!! :)
 
+
 ### Traduccions
+
+Les traduccions i els sites multilingües no entren dins l'abast d'aquest taller introductori, però que sapigueu que es poden gestionar de varies formes.
+
+Una de les principals opcions és fer-ho emprant el plugin i18n_subsites: https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites
 
 
 
@@ -496,7 +517,6 @@ env.github_pages_branch = "gh-pages"
 ...
 
 ```
-
 
 
 ### Handmade
