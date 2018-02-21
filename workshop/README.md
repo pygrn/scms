@@ -504,10 +504,37 @@ o
 $ rsync -avc --delete output $user@$host:$vhost
 ```
 
+### Via Pelican SSH
+
+Recordeu configurar les variables `SSH_*` del `Makefile`.
+
+Per sincronitzar-ho:
+```
+$ make ssh_upload
+
+o
+
+$ make rsync_upload
+```
+
+
 ### Via Pelican-FTP
 
-Tenim la opció de demanar-li a Pelican que s'encarregui de publicar els canvis via FTP. No cal que ho fem manualment, només cal definir certs paràmetres de configuració:
+Recordeu configurar les variables `FTP_*` del `Makefile`.
 
-### Via Pelican-SSH
+Per sincronitzar-ho:
+```
+$ make ftp_upload
+```
+
 
 ### Via Pelican-GithubPages
+
+La branca sobre la qual publicar el site es defineix a la variable `GITHUB_PAGES_BRANCH` del `Makefile`.
+
+Generarà el site i pujarà l'output a la branca definida fent:
+```
+$ make github
+```
+
+Si teniu problemes amb l'estil assegureu-vos de que la variable `SITEURL` de `publishconf.py` apunta al vostre punt d'entrada, i que `RELATIVE_URLS` està desactivat.
