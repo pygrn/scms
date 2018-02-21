@@ -338,6 +338,13 @@ També ho podriem fer emprant `pelican-themes`. Al resum teniu un exemple.
 Veureu que el servidor de desenvolupament detectarà el canvi, i recompil·larà el vostre site amb el nou estil! Si pel que fos no ho detecta, feu un `make html` o directament reinicieu el servidor `bash develop_server.sh restart`.
 
 
+#### Creació de temes
+
+Tot i que no és el focus d'aquest taller introductori, podeu crear els vostres temes o modificar els existents. Els temes estan basats en Jinja2, amb lo que es pot modificar el comportament d'un tema de forma molt senzilla.
+
+Trobareu més informació a http://docs.getpelican.com/en/3.6.3/themes.html#creating-themes
+
+
 #### Resum
 
 Per descarregar-los:
