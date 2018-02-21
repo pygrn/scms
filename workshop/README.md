@@ -446,6 +446,10 @@ Sempre tenim la opció de copiar el contingut generat cap al servidor destinaci�
 Rudimentari, però funciona xD:
 ```bash
 $ scp -r output/* $user@$host:$vhost
+
+o
+
+$ rsync -avc --delete output $user@$host:$vhost
 ```
 
 ### Via Pelican-FTP
