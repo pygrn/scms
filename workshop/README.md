@@ -285,7 +285,7 @@ content/
 ├── categoria1                  <--- entrades amb categoria1
 │   └── una_altra_entrada.md
 │   └── una_altra_entrada2.md
-├── categoria2                  <--- entrades amb categoria1
+├── categoria2                  <--- entrades amb categoria2
 │   └── una_entrada.md
 │   └── una_entrada2.md
 ├── pages                       <--- pàgines
@@ -353,7 +353,7 @@ Per anar de cara a barraca, en descarregarem només un, i l'activarem al nostre 
 Escolliu-ne un, i el descarregueu:
 
 ```
-$ git clone git@github.com:alexandrevicenzi/Flex.git ~/pelican-themes/Flex
+$ git clone git@github.com:alexandrevicenzi/Flex.git ~/pelican/themes/Flex
 ```
 
 #### L'activarem
@@ -388,8 +388,8 @@ Per activar-los:
   - `THEME = "~/pelican/themes/$EL_TEMA"`
 - 2) podem instalar-lo al nostre virtual env emprant la utilitat de Pelican:
   - Install una de les dues opcions:
-    - Linkat: `pelican/themes -s $PATH_DEL_TEMA --verbose`
-    - Copia: `pelican/themes -i $PATH_DEL_TEMA --verbose`
+    - Linkat: `pelican-themes -s $PATH_DEL_TEMA --verbose`
+    - Copia: `pelican-themes -i $PATH_DEL_TEMA --verbose`
   - Activació `THEME = "$EL_TEMA"`
 
 
