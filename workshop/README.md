@@ -439,6 +439,58 @@ La gràcia de tot plegat és que Pelican integra diferents mecanismes típics de
 
 En el taller veurem els tres primers.
 
+S'integra per defecte amb `Fabric` per si us calgués definir un mètode de sincronització més elaborat que una simple còpia de fitxers.
+
+Per fer-ho més fàcil, emprarem el constructor que pregenera el `quickstart` de Pelican.
+
+Només cal configurar les variables:
+```
+$ cat Makefile
+...
+
+# FTP
+
+FTP_HOST=ftp-host
+FTP_USER=ftp-user
+FTP_TARGET_DIR=ftp-path
+
+...
+
+# SSH
+SSH_HOST=ssh-host
+SSH_PORT=22
+SSH_USER=ssh-user
+SSH_TARGET_DIR=ssh-path
+
+...
+
+# Github pages
+GITHUB_PAGES_BRANCH=gh-pages
+
+...
+
+```
+
+Si voleu emprar `Fabric`, només cal configurar les variables de destinació a `fabfile.py`, i extendre'l:
+```
+$ cat fabfile.py
+...
+
+# Remote server configuration
+production = 'root@localhost:22'
+dest_path = '/var/www'
+
+...
+
+# Github Pages configuration
+env.github_pages_branch = "gh-pages"
+
+...
+
+```
+
+
+
 ### Handmade
 
 Sempre tenim la opció de copiar el contingut generat cap al servidor destinació de forma manual.
