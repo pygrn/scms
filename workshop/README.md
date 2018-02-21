@@ -13,7 +13,7 @@ Que farem?
 
 ```bash
 $ workon $venv
-$ pip intall -r requirements.txt
+$ pip install -r requirements.txt
 $ cat requirements.txt
 pelican
 markdown
