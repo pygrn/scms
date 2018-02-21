@@ -135,6 +135,10 @@ Compilem el nostre site
 ```bash
 $ pelican content
 Done: Processed 1 article, 0 drafts, 0 pages and 0 hidden pages in 0.11 seconds.
+
+o
+
+$ make html
 ```
 
 Veureu que dins ha generat tots els fitxers estàtics dins d'`output`
@@ -203,7 +207,7 @@ Estem obrint un html des del file:///, tots els requeriments relatius carregats 
 La solució? Aixecar "el servidor" de desenvolupament que Pelican integra:
 
 ```bash
-$ make devserver
+$ make devserver PORT=8000
 
 o
 
