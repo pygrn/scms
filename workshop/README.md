@@ -203,6 +203,10 @@ Estem obrint un html des del file:///, tots els requeriments relatius carregats 
 La solució? Aixecar "el servidor" de desenvolupament que Pelican integra:
 
 ```bash
+$ make devserver
+
+o
+
 $ bash develop_server.sh start 8000
 Starting up Pelican and HTTP server
 DEBUG: Pelican version: 3.7.1
@@ -223,6 +227,10 @@ Qualsevol canvi que realitzem serà detectat automàticament, i Pelican "re-comp
 
 Per aturar-lo només caldrà fer:
 ```bash
+$ make stopserver
+
+o
+
 $ bash develop_server.sh stop
 ```
 
