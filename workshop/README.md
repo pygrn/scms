@@ -367,8 +367,59 @@ Per activar-los:
 
 ### Plugins
 
-https://github.com/getpelican/pelican-plugins
+Els plugins permeten extendre la funcionalitat del nostre site sense haver de tocar cap linia de codi de Pelican. Tots els oficials els trobareu a https://github.com/getpelican/pelican-plugins
 
+#### El descarreguem
+
+Comparat amb els temes, tot el repositori de plugins pesa poc, el podem descarregar sencer:
+```
+git clone --recursive https://github.com/getpelican/pelican-plugins ~/pelican/plugins
+```
+
+#### L'activarem
+
+Escolliu-ne un, i l'activarem, nosaltres activarem `sitemap`. Reviseu el README del plugin per conèixer com funciona i com es configura: https://github.com/getpelican/pelican-plugins/blob/master/sitemap/Readme.rst
+
+Definim el path on trobar els plugins, i afegim `sitemap` a la llista de plugins actius:
+```
+$ cat <<EOF >> pelicanconf.py
+PLUGIN_PATHS = ['~/pelican/plugins']
+PLUGINS = ['sitemap', 'plugin2', 'plugin3', ...]
+EOF
+```
+
+En aquest cas només cal afegir el diccionari `SITEMAP` amb el detall de com ha de funcionar per configurar-lo:
+```
+$ cat <<EOF >> pelicanconf.py
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+EOF
+```
+
+Altres plugins necessitaran que instal·leu noves dependències, que els integreu dins del vostre tema, o que definiu fitxers específics de configuració. Veureu que cada plugin és un món.
+
+Com abans, veureu que el servidor de desenvolupament detectarà el canvi, i recompil·larà el vostre site amb el nou estil! Si pel que fos no ho detecta, feu un `make html` o directament reinicieu el servidor `bash develop_server.sh restart`.
+
+A partir d'aquest moment veureu que s'haurà generat el vostre de sitemap: http://localhost:8000/sitemap.xml. Conforme el contingut del site canvia la definició del sitemap s'anirà extenent.
+
+Fàcil, còmode i ràpid!
+
+#### Creació de plugins
+
+El sistema modular de Pelican permet que ens creem els nostres propis plugins, no és el focus d'aquest taller introductori, però que sapigueu que es pot fer. Trobareu més informació a http://docs.getpelican.com/en/3.6.3/plugins.html#how-to-create-plugins
+
+No oblideu de contribuïr-los a la comunitat!!! :)
 
 ### Traduccions
 
