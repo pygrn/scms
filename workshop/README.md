@@ -316,38 +316,44 @@ Anem a 'tunejar' una mica el nostre site.
 
 Els temes oficials els trobareu a https://github.com/getpelican/pelican-themes. Podeu veure una captura de pantalla dels temes a http://www.pelicanthemes.com.
 
-Escolliu-ne un, i el descarregarem:
+Per anar de cara a barraca, en descarregarem només un, i l'activarem al nostre site.
+
+#### El descarreguem
+
+Escolliu-ne un, i el descarregueu:
 
 ```
 $ git clone git@github.com:alexandrevicenzi/Flex.git ~/pelican-themes/Flex
 ```
 
-#### L'instal·lem
+#### L'activarem
 
-Podem copiar-lo o directament linkar-lo.
-
-El linkarem amb:
+Ho farem fàcil i directament configurarem la variable `THEME` de Pelican:
 ```
-$ pelican-themes -s ~/pelican-themes/Flex --verbose
-Linking themes...
-Linking `/home/k/pelican-themes/Flex' to `$VIRTUAL_ENV/pygrn_scms_test/lib/python3.6/site-packages/pelican/themes/Flex' ...
+echo 'THEME = "$PATH_DEL_TEMA"' >> pelicanconf.py
 ```
 
-El copiarem amb:
-```
-$ pelican-themes --install ~/pelican-themes/Flex --verbose
-Installing themes...
-Copying '/home/k/pelican-themes/Flex' to '$VIRTUAL_ENV/pygrn_scms_test/lib/python3.6/site-packages/pelican/themes/Flex' ...
-```
+També ho podriem fer emprant `pelican-themes`. Al resum teniu un exemple.
 
-Un cop instal·lat, validem que tot hagi anat bé:
-```
-$ pelican-themes -l
-simple
-notmyidea
-Flex@               <--- aquí el tenim!
-```
+Veureu que el servidor de desenvolupament detectarà el canvi, i recompil·larà el vostre site amb el nou estil! Si pel que fos no ho detecta, feu un `make html` o directament reinicieu el servidor `bash develop_server.sh restart`.
 
+
+#### Resum
+
+Per descarregar-los:
+- 1) podem descarregar tots els temes oficials i configurar el nostre site per a que vagi a buscar un tema en concret passant-li el path
+  - `git clone --recursive https://github.com/getpelican/pelican-themes ~/pelican-themes`
+- 2) podem descarregar-ne només un
+  - `$ git clone git@github.com:alexandrevicenzi/Flex.git ~/pelican-themes/Flex`
+
+Per activar-los:
+- 1) podem configurar-lo passant-li el path
+  - `THEME = "~/pelican-themes/$EL_TEMA"`
+- 2) podem instalar-lo al nostre virtual env emprant la utilitat de Pelican:
+  - Install una de les dues opcions:
+    - Linkat: `pelican-themes -s $PATH_DEL_TEMA --verbose`
+    - Copia: `pelican-themes -i $PATH_DEL_TEMA --verbose`
+  - Activació `THEME = "$EL_TEMA"`
 
 
 
