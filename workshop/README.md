@@ -314,7 +314,42 @@ Anem a 'tunejar' una mica el nostre site.
 
 ### Temes
 
-https://github.com/getpelican/pelican-themes
+Els temes oficials els trobareu a https://github.com/getpelican/pelican-themes. Podeu veure una captura de pantalla dels temes a http://www.pelicanthemes.com.
+
+Escolliu-ne un, i el descarregarem:
+
+```
+$ git clone git@github.com:alexandrevicenzi/Flex.git ~/pelican-themes/Flex
+```
+
+#### L'instal·lem
+
+Podem copiar-lo o directament linkar-lo.
+
+El linkarem amb:
+```
+$ pelican-themes -s ~/pelican-themes/Flex --verbose
+Linking themes...
+Linking `/home/k/pelican-themes/Flex' to `$VIRTUAL_ENV/pygrn_scms_test/lib/python3.6/site-packages/pelican/themes/Flex' ...
+```
+
+El copiarem amb:
+```
+$ pelican-themes --install ~/pelican-themes/Flex --verbose
+Installing themes...
+Copying '/home/k/pelican-themes/Flex' to '$VIRTUAL_ENV/pygrn_scms_test/lib/python3.6/site-packages/pelican/themes/Flex' ...
+```
+
+Un cop instal·lat, validem que tot hagi anat bé:
+```
+$ pelican-themes -l
+simple
+notmyidea
+Flex@               <--- aquí el tenim!
+```
+
+
+
 
 
 ### Plugins
